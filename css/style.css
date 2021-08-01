@@ -1,0 +1,17 @@
+
+h1, h2, h3, h4, h5, h6{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: indianred;
+}
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: indianred;
+} 
+a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: indianred;
+    text-decoration: none;
+} 
+body{
+    background-color: ivory;
+}
