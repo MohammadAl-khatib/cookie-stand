@@ -2,6 +2,8 @@
 
 let pat= document.getElementById('pat');
 let hours = ['6:00am','7:00am','8:00am','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm'];
+let locations = [];
+let branchForm = document.getElementById('branchForm');
 
 let tableElement=document.createElement('table');
 pat.append(tableElement);
@@ -48,6 +50,7 @@ function Locations (location,minCustomers,maxCustomers,avgCookies) {
   this.maxCustomers=maxCustomers;
   this.avgCookies= avgCookies;
   this.cookiesPerHour=[];
+  locations.push(this);
 }
 
 Locations.prototype.getCookiePerHour=function(){
@@ -97,6 +100,22 @@ let lima= new Locations ('Lima',2,16,4.6);
 lima.getCookiePerHour();
 lima.render();
 
-let locations = [seattle,tokyo,paris,dubai,lima];
+branchForm.addEventListener('submit', submitHandler);
+function submitHandler(event){
+  event.preventDefault();
+  let name = event.target.location.value;
+  let minCust = event.target.minCustomers.value;
+  let maxCust = event.target.maxCustomers.value;
+  let avgCookies = event.target.avgCookies.value;
+  let branch = new Locations (name,minCust,maxCust,avgCookies);
+  branch.getCookiePerHour();
+  branch.render();
+  tableElement.deleteRow(locations.length);
+  tableFooter();
+}
 
 tableFooter();
+
+
+
+

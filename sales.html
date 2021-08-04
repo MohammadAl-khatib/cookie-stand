@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     
 </head>
@@ -14,7 +15,25 @@
 <a href="index.html">Home</a>
     </header>
     <main>
+        <fieldset>
+            <legend>Add New Branch</legend>
+        <form id="branchForm">
+            <form>
+                <label for="location">New Branch Name:</label><br>
+                <input type="text" id="location" name="location"><br>
+                <label for="minCustomers">Minimum Number of Customers:</label><br>
+                <input type="number" id="minCustomers" name="minCustomers"><br>
+                <label for="maxCustomers">Maximum Number of Customers:</label><br>
+                <input type="number" id="maxCustomers" name="maxCustomers"><br>
+                <label for="avgCookies">Average Cookies Sold Per hour</label><br>
+                <input type="number" id="avgCookies" name="avgCookies"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+        </form>
+    </fieldset>
+    <br>
 <div id="pat"></div>
+
     </main>
     <footer>
         
