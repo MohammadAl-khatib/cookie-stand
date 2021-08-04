@@ -18,3 +18,9 @@ body{
 table, th, td {
     border: 1px solid black;
   }
+#salesheader{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+}
