@@ -100,22 +100,24 @@ let lima= new Locations ('Lima',2,16,4.6);
 lima.getCookiePerHour();
 lima.render();
 
+
 branchForm.addEventListener('submit', submitHandler);
 function submitHandler(event){
   event.preventDefault();
   let name = event.target.location.value;
-  let minCust = event.target.minCustomers.value;
-  let maxCust = event.target.maxCustomers.value;
-  let avgCookies = event.target.avgCookies.value;
+  let minCust = parseInt(event.target.minCustomers.value);
+  let maxCust = parseInt(event.target.maxCustomers.value);
+  let avgCookies = parseInt(event.target.avgCookies.value);
   let branch = new Locations (name,minCust,maxCust,avgCookies);
+
   branch.getCookiePerHour();
+  console.log(branch);
+  console.log(locations[0]);
+
   branch.render();
   tableElement.deleteRow(locations.length);
+
   tableFooter();
 }
 
 tableFooter();
-
-
-
-

@@ -58,6 +58,12 @@ main ul{
 main img:nth-child(2){
     display: block;
 }
+#imageSection img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
+}
 footer h4{
     font-weight: 600;
     font-size: 18px;
@@ -74,10 +80,23 @@ p {
 
 table, th, td {
     border: 1px solid black;
+    text-align: center;
   }
 #salesheader{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+}
+/* #######################  start sales page styling   #######################*/
 
+#salesheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+#salesheader h1{
+font-weight: 700;
+font-size: 18px;
+color:white;
 }
